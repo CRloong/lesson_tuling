@@ -45,8 +45,19 @@
     - geturl:请求返回对象的url
     - info: 请求返回对象的meta信息
     - getcode: 返回的http code 
-- request.date 的使用
+- request.data 的使用
     - 访问网络的两种方法
-        - get
+        - get:
+            - 利用参数给服务器传递信息
+            - 参数为dict，然后需要用parse加密
+            - 案例v04
         - post
-        - 案例v04
+            - 一般向服务器传递参数使用
+            - post是把信息自动加密处理
+            - 如果想使用post信息，需要用到data参数
+            - 使用post，意味着Http的请求头可能要更改
+                - Content-Type: application/x-ww.form-urlencode
+                - Content-Length: 数据长度
+                - 一旦更改请求方法，请注意其他请求头部信息相应
+            - urllib.parse.urlencode可以将字符串自动转成上面的
+            - 案例v05
