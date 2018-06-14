@@ -22,7 +22,7 @@ v:7377  随机4位数字，防止缓存用
 baseurl = 'http://www.qiongqi.tech/vote'
 
 # 存放用来模拟form的数据一定是dict格式
-kw = 22
+kw = [22, 23]
 data = {
     'voteList': kw,
     'v': random.randint(1001, 9999)

@@ -62,5 +62,11 @@
             - urllib.parse.urlencode可以将字符串自动转成上面的
             - 案例v05
             - 为了更多的设置请求信息，单纯的通过urlopen函数已经不太好用了
-            - 需要利用request.Request 类
-           
+            - 案例v6
+
+- urllib.error
+    - URLError产生的原因；
+        - 没网
+        - 服务器挂接失败
+        - 找不到指定服务器
+        - 是OSError的子类                  
