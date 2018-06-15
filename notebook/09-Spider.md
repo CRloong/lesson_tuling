@@ -62,11 +62,24 @@
             - urllib.parse.urlencode可以将字符串自动转成上面的
             - 案例v05
             - 为了更多的设置请求信息，单纯的通过urlopen函数已经不太好用了
-            - 案例v6
+            - 案例v06
 
 - urllib.error
     - URLError产生的原因；
         - 没网
         - 服务器挂接失败
         - 找不到指定服务器
-        - 是OSError的子类                  
+        - 是OSError的子类
+   
+- ProxyHandler处理（代理服务器）
+    - 使用代理IP,
+    - 获取代理服务器的地址：
+        - www.xicidaili.com
+        - www.goubanjia.com
+    - 代理用来隐藏真实访问中，代理也不允许频繁访问某一个固定网站，所以，代理一定要很多。
+    - 基本使用步骤:
+        1. 设置代理地址
+        2. 创建ProxyHandler
+        3. 创建Opener
+        4. 安装Opener    
+- 案例v08              
