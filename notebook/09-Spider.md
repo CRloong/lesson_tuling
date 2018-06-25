@@ -82,4 +82,33 @@
         2. 创建ProxyHandler
         3. 创建Opener
         4. 安装Opener    
-- 案例v08              
+- 案例v08
+
+- cookie & session
+    - http协议是无记忆性的，人们采用的补充协议
+    - cookie是发给用户的（即http浏览器）的一段信息，session是保存在服务器上的对应的另一半信息，用来记忆用户信息
+
+- cookie和session的区别
+    - 存放位置不同
+    - cookie不安全
+    - session会保存在服务器上一定时间
+    - 单个cookie保存数据不超过4K,很多浏览器限制一个站点最多保存20个
+- session的存放位置
+    - 存在服务器端
+    - 一般情况，session是放在内存中或者数据库中
+
+- 使用cookie登录
+    - 直接把cookie复制下来，然后主动放入请求头
+    - http模块包含一些关于cookie的模块，通过他们可以自动使用cookie
+        - CookieJar
+            - 管理存储Cookie，向传出的http请求添加cookie
+            - cookie存储在内存中，CookieJar案例回收后cookie将消失
+        - FileCookieJar（filename,delayload=None,policy=None)
+            - 使用文件管理cookie
+            - filename是保存cookie的文件
+        - MozillaCookieJar（filename,delayload=None,policy=None)
+            - 创建与mozilla浏览器的cookie.txt兼容的FileCookieJar实例
+        - LwpCookieJar（filename,delayload=None,policy=None)
+            - - 创建与libwww-per标准兼容的Set-Cookie3兼容的FileCookieJar实例
+        - 关系：CookieJar-->FileCookieJar-->MozillaCookieJar & LwpCookieJar
+        -               
